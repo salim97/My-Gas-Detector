@@ -69,7 +69,7 @@ Item {
                 top: root.collapsed ? parent.top : imgIcon.bottom
                 horizontalCenter: parent.horizontalCenter
             }
-            font.pointSize: 16
+            font.pixelSize: SH.dp(20)
             visible: !(scale === 0)
             color: "white"
             scale: root.collapsed && !root.selected ? 0 : 1
@@ -81,8 +81,6 @@ Item {
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            console.log("menu item index: "+index)
-            //parent.description = ""
             root.selected = !root.selected;
             root.parent.toggle();
         }

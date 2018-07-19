@@ -15,6 +15,7 @@ class MyNetwork : public QObject
 public:
     explicit MyNetwork(QObject *parent = nullptr, SensorModel *sensorModel = nullptr);
 
+    void proccessData(QString data);
 signals:
 
 public slots:
@@ -23,12 +24,10 @@ public slots:
 private slots:
     void readyReadUDP();
 
-    void timeout();
 private:
     int udpPort = 45454 ;
     QUdpSocket *m_udpSocket = nullptr;
     SensorModel *sensorModel;
-    QTimer *timer ;
 };
 
 #endif // MYNETWORK_H

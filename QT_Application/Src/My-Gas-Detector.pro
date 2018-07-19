@@ -16,13 +16,15 @@ HEADERS += \
     mynetwork.h \
     mypropertyhelper.h \
     sensormodel.h \
-    sensorlist.h
+    sensorlist.h \
+    ScreenHelper.h
 
 SOURCES += \
         main.cpp \
     mynetwork.cpp \
     sensormodel.cpp \
-    sensorlist.cpp
+    sensorlist.cpp \
+    ScreenHelper.cpp
 
 RESOURCES += qml.qrc
 

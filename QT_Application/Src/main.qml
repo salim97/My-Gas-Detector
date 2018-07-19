@@ -9,14 +9,21 @@ Window {
     height: 800
     title: qsTr("My Gas Detector")
     Rectangle{
+        id: mainRect
         anchors.fill: parent
-        color: cl.currentColor
+        property string m_color: cl.currentColor
+        property bool changeColorTrigger: false
+        onM_colorChanged: {
+            changeColorTrigger = false
+            changeColorTrigger = true
+        }
+
         Text {
           id: mainText
 
           text: cl.description
 
-          font.pixelSize: 40 // TODO: convert it to DP
+          font.pixelSize: SH.dp(70)
           anchors.centerIn: parent
 
 
@@ -28,12 +35,29 @@ Window {
 //            }
 //          }
         }
-        Behavior on color {
 
-            ColorAnimation {
 
-                duration: 1500
-            }
+//        Behavior on color {
+
+//            ColorAnimation {
+
+//                duration: 1500
+//            }
+//        }
+
+        gradient: Gradient {
+          GradientStop {
+            position: 1
+            color: mainRect.changeColorTrigger == true ? cl.currentColor  : cl.currentColor
+
+            Behavior on color { ColorAnimation { duration: 2500 } }
+          }
+          GradientStop {
+            position: 0
+            color: mainRect.changeColorTrigger == true ? cl.currentColor  : cl.currentColor
+
+            Behavior on color { ColorAnimation { duration: 1500 } }
+          }
         }
 
     }

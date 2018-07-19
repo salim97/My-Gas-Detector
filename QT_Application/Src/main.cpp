@@ -5,6 +5,7 @@
 #include <QFontDatabase>
 #include <QDebug>
 
+#include "ScreenHelper.h"
 #include "mynetwork.h"
 #include "sensorlist.h"
 #include "sensormodel.h"
@@ -25,6 +26,9 @@ int main(int argc, char *argv[])
 
 
     QQmlApplicationEngine engine;
+
+    ScreenHelper screenHelper;
+    engine.rootContext()->setContextProperty("SH", &screenHelper);
 
     SensorModel sensorModel;
     engine.rootContext()->setContextProperty(QStringLiteral("sensorModel"), &sensorModel);
