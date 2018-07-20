@@ -16,9 +16,9 @@ DHT dht;
 /*-----------------------*/
 // analog mux-demux 4051
 /*----------------------*/
-#define MUX_A D2
+#define MUX_A D4
 #define MUX_B D3
-#define MUX_C D4
+#define MUX_C D2
 
 // создаём объект для работы с датчиком и передаём ему номер пина
 MQ135 mq135(PIN_MQ135);
