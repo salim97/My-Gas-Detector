@@ -5,4 +5,4 @@ Simple cross platform application to display ( Air Quality, CARBON MONOXIDE, ...
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/cE4nqWrOz2U/0.jpg)](https://www.youtube.com/watch?v=cE4nqWrOz2U)
 
 
-See also: https://easyeda.com/unix-dz/My-Gas-Detector
+See also: https://easyeda.com/benabadji.mohammed.salim/My-Gas-Detector
