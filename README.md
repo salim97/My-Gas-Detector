@@ -37,7 +37,7 @@ and then download source code and build it for any platform you are using
 
 # Wiki
 
-url: https://github.com/salim97/My-Digital-Servo-Motor/wiki
+url: https://github.com/salim97/My-Gas-Detector/wiki
 
 # Copyright © 2018-2019
 
